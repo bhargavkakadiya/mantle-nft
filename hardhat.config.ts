@@ -10,14 +10,28 @@ const config: HardhatUserConfig = {
   paths: { tests: "tests" },
   etherscan: {
     apiKey: process.env.ETHERSCAN_API_KEY,
+    customChains: [
+      {
+        network: "mantle-testnet",
+        chainId: 5001,
+        urls: {
+          apiURL: "https://explorer.testnet.mantle.xyz/api",
+          browserURL: "https://explorer.testnet.mantle.xyz",
+        },
+      },
+    ],
   },
   networks: {
     sepolia: {
-      url: "",
+      url: process.env.SEPOLIA_RPC_URL || "",
       accounts: [PRIVATE_KEY],
     },
     goerli: {
       url: process.env.GOERLI_RPC_URL || "",
+      accounts: [PRIVATE_KEY],
+    },
+    "mantle-testnet": {
+      url: "https://rpc.testnet.mantle.xyz/",
       accounts: [PRIVATE_KEY],
     },
   },
