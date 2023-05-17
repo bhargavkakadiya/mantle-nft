@@ -6,7 +6,7 @@ async function main() {
 
   const deployTx = await contract.deployed();
 
-  console.log("MyVotingToken deployed to:", deployTx.address);
+  console.log("MyNFT deployed to:", deployTx.address);
   console.log("TxHash:", deployTx.deployTransaction.hash);
 }
 
