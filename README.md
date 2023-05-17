@@ -24,6 +24,6 @@ yarn hardhat run scripts/deploy.ts
 ## To Deploy on Goerli
 
 ```bash
-yarn hardhat run scripts/deploy.ts --network goerli # deploy
-yarn hardhat verify --network goerli <contract addr> # verify on etherscan
+yarn hardhat run scripts/deploy.ts --network mantle-testnet # deploy
+yarn hardhat verify --network mantle-testnet <contract addr> # verify on etherscan
 ```
